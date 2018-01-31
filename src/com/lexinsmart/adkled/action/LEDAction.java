@@ -8,8 +8,7 @@ import com.lexinsmart.adkled.model.ApcValues;
 import com.lexinsmart.adkled.service.APCValuesService;
 
 public class LEDAction {
-	public static Logger logger = Logger.getLogger(LEDAction.class);
-
+	static Logger logger = Logger.getLogger(LEDAction.class);
 	public static void main(String Args[]) {
 
 		String fileString = ReadText.fileToString();
