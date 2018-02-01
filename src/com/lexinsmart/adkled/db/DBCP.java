@@ -18,7 +18,6 @@ public class DBCP {
 
 		protected static final Log log = LogFactory.getLog(DBCP.class.getName());
 		private static DBCP _instance = null;
-		private static DataSource ds;
 		private static DataSource dataSource;
 
 		public static DBCP getInstance() {
@@ -212,14 +211,14 @@ public class DBCP {
 			}
 		}
 
-		public static void main(String[] args) {
-			for (int i = 0; i < 30; i++) {
-				long s = System.currentTimeMillis();
-				DBCP dbcp = DBCP.getInstance();
-				Connection con = getConnection();
-				System.out.println(con.toString());
-				dbcp.releaseConnection(con);
-				System.out.println(System.currentTimeMillis() - s);
-			}
-		}
+//		public static void main(String[] args) {
+//			for (int i = 0; i < 30; i++) {
+//				long s = System.currentTimeMillis();
+//				DBCP dbcp = DBCP.getInstance();
+//				Connection con = getConnection();
+//				System.out.println(con.toString());
+//				dbcp.releaseConnection(con);
+//				System.out.println(System.currentTimeMillis() - s);
+//			}
+//		}
 	}

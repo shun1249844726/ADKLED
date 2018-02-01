@@ -6,7 +6,6 @@ import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 
-import com.lexinsmart.adkled.action.LEDAction;
 import com.lexinsmart.adkled.dao.APCValuesDao;
 import com.lexinsmart.adkled.db.DBCP;
 import com.lexinsmart.adkled.model.ApcValues;
