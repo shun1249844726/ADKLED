@@ -21,11 +21,11 @@ public class APCValuesDao {
 	public void release() {
 		DBCP.releaseConnection(connection);
 		DBCP.closeStatement(ptmt, rest);
-		System.out.println("释放APCvaluesDao连接");
+	//	System.out.println("释放APCvaluesDao连接");
 	}
 	public void UpdateAPCValues(ArrayList<ApcValues> tankList) {
 		try {
-			int row = 0;
+//			int row = 0;
 			String sql = "REPLACE INTO apcvalues(tagname,tagvalue,timestamp) VALUES(?,?,?) ";
 			ptmt = connection.prepareStatement(sql);
 			for (int i = 0; i < tankList.size(); i++) {
@@ -35,10 +35,11 @@ public class APCValuesDao {
 				ptmt.addBatch();
 			}
 			// 执行批处理操作并返回计数组成的数组  
-            int[] rows = ptmt.executeBatch();  
+
+			ptmt.executeBatch();  
             // 对行数赋值  
-            row = rows.length;  
-            System.out.println("addrow:   "+row);
+//            row = rows.length;  
+//            System.out.println("addrow:   "+row);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

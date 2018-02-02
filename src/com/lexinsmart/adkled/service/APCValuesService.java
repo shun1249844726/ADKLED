@@ -48,7 +48,7 @@ public class APCValuesService {
 		} finally {
 			apcValuesDao.release();
 			DBCP.releaseConnection(connection);
-			System.out.println("释放连接");
+//			System.out.println("释放连接");
 		}
 	}
 }

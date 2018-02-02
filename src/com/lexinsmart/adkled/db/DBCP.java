@@ -66,10 +66,10 @@ public class DBCP {
 					dbcpDataSource.setMaxIdle(Integer.parseInt(config.getProperty("maxIdle")));
 					dbcpDataSource.setMaxWait(Integer.parseInt(config.getProperty("maxActive")));
 					DBCP.dataSource = (DataSource) dbcpDataSource;
-					System.out.println("dbcp数据源初始化成功!");
+//					System.out.println("dbcp数据源初始化成功!");
 
 				} catch (Exception ex) {
-					System.out.println("dbcp数据源初始化失败:" + ex.getMessage());
+//					System.out.println("dbcp数据源初始化失败:" + ex.getMessage());
 				}
 			}
 			return DBCP.dataSource;
